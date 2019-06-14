@@ -1,8 +1,19 @@
-const http = require('http');
+const express = require('express');
+const bodyParser = require('body-parser');
 
-const server = http.createServer((req, res) => {
-    res.setHeader('Content-Type','text/html');
-    res.end('<h1>hello</h1>')
-})
+const app = express();
 
-server.listen(3000);
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+
+app.get('/', (req, res) => {
+    res.send("hello")
+});
+
+app.post('/character/gen',(req, res) => {
+    console.log(req.body);
+    res.send("ok")
+});
+
+
+app.listen(3000);
