@@ -1,0 +1,14 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Light Novel Apis",
+  "main": "script.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
