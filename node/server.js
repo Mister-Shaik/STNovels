@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 //Name Generator
 app.post('/character/:category',(req, res) => {
-
+	
     const collection = names[req.params.category];
     const len = Object.keys(collection).length;
     
