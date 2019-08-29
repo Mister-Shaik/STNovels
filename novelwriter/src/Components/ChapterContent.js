@@ -31,7 +31,7 @@ class ChapterContent extends Component {
         return (
             <div className="pa4 pt5 center bg-light-gray" style={{maxHeight:"calc(100vh - 100px)",overflowY:"auto"}} onClick={() => {if(this.state.Content === ""){this.props.onClick()}}}>
                 <div className="tc">
-                    <input className="bg-light-gray f2 tc" style={{outline:"none", border: "none"}} type="text" placeholder="Chapter Title"></input>
+                    <input className="bg-light-gray f2 tc" style={{outline:"none", border: "none"}} type="text" placeholder="Title Here"></input>
                     <p className="dark-gray">__________________________</p>
                 </div>
                 <div className="f3 dark-gray pt4 ph3" style={{fontFamily:"Merriweather",wordWrap:"break-word"}}>

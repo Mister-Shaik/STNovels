@@ -2,3 +2,11 @@ th{
     width: 100px;
 }
 
+.Landing{
+    min-height: 70vh;
+    background-image: linear-gradient(to right, #1545ea 0%, #a612ed 100%);
+    background-blend-mode: screen;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
