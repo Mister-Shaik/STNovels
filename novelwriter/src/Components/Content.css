@@ -10,3 +10,9 @@ th{
     background-repeat: no-repeat;
 }
 
+.floating-options{
+    position: fixed;
+    top: 30%;
+    right: 0;
+}
+

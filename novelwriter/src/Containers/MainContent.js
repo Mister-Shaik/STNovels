@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Home from '../Components/Index';
+import ChapterContent from '../Components/ChapterContent'
 
 class MainContent extends Component {
     render() {
         return (
             <div className="w-100">
-                <Home />
+                <ChapterContent />
             </div>
         );
     }

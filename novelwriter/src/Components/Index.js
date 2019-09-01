@@ -4,8 +4,8 @@ import './Content.css';
 class Home extends Component{
     render(){
         return(
-            <div className="row tc w-100 Landing">
-                <div className="col-7 mt6 tl ph6 white">
+            <div className="row tc w-100 Landing ma0">
+                <div className="col-7 mt6 tl ph6 white  ">
                     <h5>NOVEL WRITING SOFTWARE</h5>
                 </div>
                 <div className="col-4 mv4 bg-white pa4 br3">
