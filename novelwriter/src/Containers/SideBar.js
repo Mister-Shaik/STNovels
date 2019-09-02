@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import Sidenav from '../Components/SubComponents/Sidenav';
-import {Collapse} from 'reactstrap';
 
 class SideBar extends Component {
     render() {
         return (
-            <Collapse 
-            isOpen={this.props.opens} 
-            className="w-25 fade pr0 overflow-y-auto bg-white" style={{height:"calc(100vh - 62px)"}}>
+            <div className="pr0 db overflow-y-auto overflow-x-hidden bg-white" style={{height:"calc(100vh - 62px)",transition:"0.8s",width:this.props.opens === true ? "25%":"0"}}>
                 <Sidenav name="Novels" />
                 <Sidenav name="Plots" />
                 <Sidenav name="Trackers" />
-            </Collapse>
+            </div>
         );
     }
 }

@@ -11,7 +11,7 @@ class App extends Component {
     super();
     this.state = {
       submenu: false,
-      currentPage:"Dashboard"
+      currentPage:"Novel"
     }
   }
 

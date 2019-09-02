@@ -15,8 +15,9 @@ class NovelStats extends Component {
                         </div>
                         <p>WORD COUNT</p>
                     </div>
-                    <div className="pv3">
-                        <h2>60</h2>
+                    <div className="tc">
+                        <h2 className="fl tr pv2">64</h2>
+                        <p className="fr pt4">0.0%</p>
                     </div>
                 </div>
                 <div className="w-25 pv3 ph4 br2 card mr3">
@@ -30,8 +31,8 @@ class NovelStats extends Component {
                         </div>
                         <p>TOTAL CHAPTERS</p>
                     </div>
-                    <div>
-                        <h2 className="fl pv2">8</h2>
+                    <div className="tc">
+                        <h2 className="fl tr pv2">8</h2>
                         <p className="fr pt4">0.0%</p>
                     </div>
                 </div>
@@ -39,8 +40,24 @@ class NovelStats extends Component {
                     <div className="pv2">
                         <p>Avg WORDS / CH</p>
                     </div>
-                    <div className="pv3">
-                        <h2>8</h2>
+                    <div className="tc">
+                        <h2 className="fl tr pv2">232</h2>
+                        <p className="fr pt4">0.0%</p>
+                    </div>
+                </div>
+                <div className="w-25 pv3 ph4 br2 card mr3">
+                    <div className="pv2">
+                        <div className="fr">
+                            <select style={{border:"none"}}>
+                                <option value="1" selected="">Today</option>
+                                <option value="7">This Month</option>
+                                <option value="30">This Year</option>
+                            </select>
+                        </div>
+                        <p>You wrote for</p>
+                    </div>
+                    <div className="pv2 tc">
+                        <h2>4 <span className="f3">hrs</span> 43 <span className="f3">mins</span></h2>
                     </div>
                 </div>
             </div>
