@@ -1,5 +1,5 @@
 {
-    "Novels" : ["Chapter 1", "Chapter 2", "Chapter 3"],
+    "Chapters" : ["Chapter 1", "Chapter 2", "Chapter 3"],
     "Plots" : ["Plot 1", "Plot 2", "Plot 3"],
     "Trackers" : {
         "Characters" : ["shaik", "balu", "nono"],

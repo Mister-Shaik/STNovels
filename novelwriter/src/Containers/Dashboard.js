@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import NovelStats from '../Components/NovelStats';
-import NovelList from '../Components/SubComponents/NovelList';
+import NovelList from '../Components/NovelList';
 
 class Dashboard extends Component {
     render() {
         return (
-            <div className="pa5">
-                <div className="pv2 ph6 bg-light-gray">
+            <div className="pv3"  style={{maxHeight:"calc(100vh - 60px)",overflowY:"auto"}}>
+                <div className="pv2 ph4 bg-light-gray">
                     <h4>Welcome back!</h4>
                     <h2>Shaik sha</h2>
                 </div>

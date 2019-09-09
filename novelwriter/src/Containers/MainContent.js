@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import ChapterContent from '../Components/ChapterContent'
+import Dashboard from './Dashboard';
 
 class MainContent extends Component {
     render() {
         return (
             <div className="w-100">
-                <ChapterContent />
+                {this.props.page === "Dashboard" ? <Dashboard /> : <ChapterContent />}
             </div>
         );
     }

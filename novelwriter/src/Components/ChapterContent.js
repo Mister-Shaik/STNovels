@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ContentEditable from 'react-contenteditable';
 import './Content.css'
+import ReactTooltip from 'react-tooltip'
 
 class ChapterContent extends Component {
 
@@ -10,10 +11,13 @@ class ChapterContent extends Component {
         this.state = {
             IsContent : false,
             Title: "",
-            Content: "Start Typing Here"
+            Content: "Start Typing Here",
+            curse:true,
+            autofill:true,
+            history:true
         };
-    }
-
+    } 
+      
     componentWillMount()
     {
         // set Title from the Trackers 
@@ -28,18 +32,27 @@ class ChapterContent extends Component {
     ContentChange(cont) {
         let temp = cont.target.value;
         let arr = ["name", "anyone"]
-
+        let dat = ["bitch"];
+        
         // check for escape string
         let name = temp.lastIndexOf("%") !== -1 ? temp.substring(temp.lastIndexOf("@") + 1, temp.lastIndexOf("%")) : "";
-        console.log(name)
-
+        
         // change escape string with the specified tracker info
-        if(arr.includes(name))
+        if(arr.includes(name) && this.state.autofill)
         {
             this.setState({Content:temp.replace("@"+name+"%","<br>Shaik sha vali")});
             return;
         }
 
+        // check if curse words is switched on
+        if(this.state.curse)
+        {
+            for(var x in dat)
+            {
+                this.setState({Content:temp.replace(dat[x],"bi**h")});
+                return;
+            }
+        }
         // update state
         this.setState({Content: temp});
     };
@@ -48,13 +61,14 @@ class ChapterContent extends Component {
     render() {
         return (
             <div className="pa4 pt5 center bg-light-gray" style={{maxHeight:"calc(100vh - 100px)",overflowY:"auto"}} onClick={() => {if(this.state.Content === ""){this.setState({Content:"Start Typing Here"})}}}>
+                <ReactTooltip place="left" type="dark" effect="float"/>
                 <div className="tc">
-                    <input className="bg-light-gray f2 tc" style={{outline:"none", border: "none"}} type="text" placeholder="Title Here"></input>
+                    <input className="bg-light-gray gray f2 tc" style={{outline:"none", border: "none"}} type="text" placeholder="Title Here"></input>
                     <p className="dark-gray">__________________________</p>
                 </div>
                 <div className="f3 dark-gray pt4 ph3" style={{fontFamily:"Merriweather",wordWrap:"break-word"}}>
                     <ContentEditable
-                    style={{outline:"none",maxWidth:"70vw",minHeight:"45vh"}}
+                    style={{outline:"none",maxWidth:"80vw",minHeight:"45vh",fontSize:"22px"}}
                     onClick={() => {
                         if(this.state.Content === "Start Typing Here" )
                         {
@@ -71,13 +85,27 @@ class ChapterContent extends Component {
                     />
                 </div>
                 <div className="fixed-bottom tc ml0 mt2 center w-25">
-                    <h5>Word Count : {this.state.Content.split(' ').length}</h5>
+                    <h5>Word Count : {this.state.Content.replace(/<[^>]+>/g, ' ').replace(/\s+/gi,' ').split(' ').length}</h5>
                 </div>
-                <div className="floating-options pa3 bg-gold br3">
-                    <i className="fa fa-arrow-left bg-light-gray"/>
-                    <p><i className="fa fa-eye"/></p>
-                    <p><i className="fa fa-eye"/></p>
-                    <p><i className="fa fa-eye"/></p>
+                <div className="floating-options br3">
+                    <p className="bg-light-blue hover-bg-light-green ph3 pv2 mv1" data-tip="Smart Insert" onClick={() => {this.setState({autofill:!this.state.autofill})}}>
+                        <span className="fa-stack fa-1x">
+                            <i className="fa fa-stack-1x fa-hand-lizard-o"/>
+                            {this.state.autofill?"":<i className="fa fa-stack-2x fa-times"/>}
+                        </span>
+                    </p>
+                    <p className="bg-light-blue hover-bg-light-green ph3 pv2 mv1" data-tip="Read Safe" onClick={() => {this.setState({curse:!this.state.curse})}}>
+                        <span className="fa-stack fa-1x">
+                            <i className="fa fa-stack-1x fa-eye"/>
+                            {this.state.curse?"":<i className="fa fa-stack-2x fa-times"/>}
+                        </span>
+                    </p>
+                    <p className="bg-light-blue hover-bg-light-green ph3 pv2 mv1" data-tip="History" onClick={() => {this.setState({history:!this.state.history})}}>
+                        <span className="fa-stack fa-1x">
+                            <i className="fa fa-stack-1x fa-history"/>
+                            {this.state.history?"":<i className="fa fa-stack-2x fa-times"/>}
+                        </span>
+                    </p>
                 </div>
             </div>
         );

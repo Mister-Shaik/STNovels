@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 class NovelStats extends Component {
     render() {
         return (
-            <div className="pt4 pb2 ph6 flex flex-row justify-start ">
-                <div className="w-25 ph4 pv3 br2 card mr3">
+            <div className="pt2 pb2 ph4 flex flex-wrap justify-content-between">
+                <div className="w-30 pv4 ph3 br2 card mr3 mv3">
                     <div className="pv2">
                         <div className="fr">
-                            <select>
+                            <select className="select-css">
                                 <option value="1" selected="">Today</option>
                                 <option value="7">Last week</option>
                                 <option value="30">Last Month</option>
@@ -20,10 +20,10 @@ class NovelStats extends Component {
                         <p className="fr pt4">0.0%</p>
                     </div>
                 </div>
-                <div className="w-25 pv3 ph4 br2 card mr3">
+                <div className="w-30 pv4 ph3 br2 card mr3 mv3">
                     <div className="pv2">
                         <div className="fr">
-                            <select>
+                            <select className="select-css">
                                 <option value="1" selected="">All</option>
                                 <option value="7">Last week</option>
                                 <option value="30">Last Month</option>
@@ -36,7 +36,7 @@ class NovelStats extends Component {
                         <p className="fr pt4">0.0%</p>
                     </div>
                 </div>
-                <div className="w-25 pv3 ph4 br2 card mr3">
+                <div className="w-30 pv4 ph3 br2 card mr3 mv3">
                     <div className="pv2">
                         <p>Avg WORDS / CH</p>
                     </div>
@@ -45,16 +45,16 @@ class NovelStats extends Component {
                         <p className="fr pt4">0.0%</p>
                     </div>
                 </div>
-                <div className="w-25 pv3 ph4 br2 card mr3">
+                <div className="w-30 pv4 ph3 br2 card mr3 mv3">
                     <div className="pv2">
                         <div className="fr">
-                            <select style={{border:"none"}}>
+                            <select  className="select-css">
                                 <option value="1" selected="">Today</option>
                                 <option value="7">This Month</option>
                                 <option value="30">This Year</option>
                             </select>
                         </div>
-                        <p>You wrote for</p>
+                        <p>Total</p>
                     </div>
                     <div className="pv2 tc">
                         <h2>4 <span className="f3">hrs</span> 43 <span className="f3">mins</span></h2>
