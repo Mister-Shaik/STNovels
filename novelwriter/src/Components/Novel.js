@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import NovelStats from '../Components/NovelStats';
-import NovelList from '../Components/NovelList';
+import NovelStats from './SubComponents/NovelStats';
+import NovelList from './SubComponents/NovelList';
 
-class Dashboard extends Component {
+class Novel extends Component {
     render() {
         return (
-            <div className="pv3"  style={{maxHeight:"calc(100vh - 60px)",overflowY:"auto"}}>
+            <div>
                 <div className="pv2 ph4 bg-light-gray">
                     <h4>Welcome back!</h4>
                     <h2>Shaik sha</h2>
@@ -17,4 +17,4 @@ class Dashboard extends Component {
     }
 }
 
-export default Dashboard;
+export default Novel;

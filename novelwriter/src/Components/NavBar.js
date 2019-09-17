@@ -12,7 +12,7 @@ class NavBar extends Component {
                     <h4 className="pa2">Welcome</h4>
                 </div>
                 <div className="flex align-self-center justify-content-end" style={{marginLeft:"auto",flex:"1"}}>
-                    <i className="fa fa-gear fa-2x"></i>
+                    <i className="fa fa-gear fa-2x" />
                 </div>
             </div>
         );

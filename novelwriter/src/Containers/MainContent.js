@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ChapterContent from '../Components/ChapterContent'
-import Dashboard from './Dashboard';
+import Dashboard from '../Components/Dashboard';
 
 class MainContent extends Component {
     render() {
