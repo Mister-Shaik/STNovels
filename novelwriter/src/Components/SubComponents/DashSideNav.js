@@ -9,6 +9,9 @@ class DashSideNav extends Component {
                   </div>
                   <div className="flex bg-light-gray" style={{whiteSpace:"nowrap"}}>
                         <div className="bg-blue mr3" style={{minWidth:"5px"}}/>
+                        <h4 className="pl4 pv3"><i className="fa fa-book pr2"/> Workspace</h4>
+                  </div>
+                  <div className="flex hover-bg-light-gray" style={{whiteSpace:"nowrap"}}>
                         <h4 className="pl4 pv3"><i className="fa fa-edit pr2"/> Preferences</h4>
                   </div>
                   <div className="flex hover-bg-light-gray" style={{whiteSpace:"nowrap"}}>
