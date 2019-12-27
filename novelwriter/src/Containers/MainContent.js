@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ChapterContent from '../Components/ChapterContent'
-import Dashboard from '../Components/Dashboard';
+import Dashboard from '../Components/Dashboard'
+import TrackersContent from '../Components/TrackersContent'
 
 class MainContent extends Component {
     render() {

@@ -16,6 +16,11 @@ th{
     right: 0;
 }
 
+.plots-float{
+    position: fixed;
+    right: 0;
+}
+
 .select-css {
 	display: block;
 	background-color: #fff;

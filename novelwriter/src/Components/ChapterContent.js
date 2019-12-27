@@ -68,7 +68,7 @@ class ChapterContent extends Component {
                 </div>
                 <div className="f3 dark-gray pt4 ph3" style={{fontFamily:"Merriweather",wordWrap:"break-word"}}>
                     <ContentEditable
-                    style={{outline:"none",maxWidth:"80vw",minHeight:"45vh",fontSize:"22px"}}
+                    style={{outline:"none",maxWidth:"70vw",minHeight:"45vh",fontSize:"22px"}}
                     onClick={() => {
                         if(this.state.Content === "Start Typing Here" )
                         {
@@ -81,31 +81,12 @@ class ChapterContent extends Component {
                     disabled={false}       // use true to disable editing
                     onChange={(e) => this.ContentChange(e)} // handle innerHTML change
                     tagName='p' // Use a custom HTML tag (uses a div by default)
-                    className="center ph6"
+                    className="center ph4"
                     />
+
                 </div>
                 <div className="fixed-bottom tc ml0 mt2 center w-25">
                     <h5>Word Count : {this.state.Content.replace(/<[^>]+>/g, ' ').replace(/\s+/gi,' ').split(' ').length}</h5>
-                </div>
-                <div className="floating-options br3">
-                    <p className="bg-light-blue hover-bg-light-green ph3 pv2 mv1" data-tip="Smart Insert" onClick={() => {this.setState({autofill:!this.state.autofill})}}>
-                        <span className="fa-stack fa-1x">
-                            <i className="fa fa-stack-1x fa-hand-lizard-o"/>
-                            {this.state.autofill?"":<i className="fa fa-stack-2x fa-times"/>}
-                        </span>
-                    </p>
-                    <p className="bg-light-blue hover-bg-light-green ph3 pv2 mv1" data-tip="Read Safe" onClick={() => {this.setState({curse:!this.state.curse})}}>
-                        <span className="fa-stack fa-1x">
-                            <i className="fa fa-stack-1x fa-eye"/>
-                            {this.state.curse?"":<i className="fa fa-stack-2x fa-times"/>}
-                        </span>
-                    </p>
-                    <p className="bg-light-blue hover-bg-light-green ph3 pv2 mv1" data-tip="History" onClick={() => {this.setState({history:!this.state.history})}}>
-                        <span className="fa-stack fa-1x">
-                            <i className="fa fa-stack-1x fa-history"/>
-                            {this.state.history?"":<i className="fa fa-stack-2x fa-times"/>}
-                        </span>
-                    </p>
                 </div>
             </div>
         );

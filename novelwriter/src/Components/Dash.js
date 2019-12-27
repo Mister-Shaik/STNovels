@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import NovelStats from './SubComponents/NovelStats';
 import NovelList from './SubComponents/NovelList';
 
-class Novel extends Component {
+class Dash extends Component {
     render() {
         return (
             <div>
@@ -17,4 +17,4 @@ class Novel extends Component {
     }
 }
 
-export default Novel;
+export default Dash;
