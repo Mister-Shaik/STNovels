@@ -34,9 +34,9 @@ class Plots extends Component {
     render() {
 
         let AsideData;
-        if(this.props.Asidetype === "Plot"){
+        if(true){
             AsideData = 
-            <div>
+            <div className="bg-white" style={{height:"89vh"}}>
                 <div className="pa2 bg-blue white">
                     <h4 className="ma0">
                     {this.props.name}
@@ -54,7 +54,7 @@ class Plots extends Component {
                 return(
                 <tr>
                     <th style={{textAlign:"right"}}>{el.name} : </th>
-                    <td style={{wordWrap:"break-word",textAlign:"left"}} colspan="2">{el.detail}
+                    <td className="w-spc-nowrap tl" colspan="2">{el.detail}
                     <i className="fa fa-times fr" onClick={() => {
                         let arr = this.state.names;
                         let names = arr.filter(check => check !== el);
@@ -67,7 +67,7 @@ class Plots extends Component {
             );
             
             AsideData = 
-            <div>
+            <div className="bg-white" style={{height: "89vh"}}>
                 <div className="pa2 bg-blue white">
                     <h4 className="ma0">
                     {this.props.name}

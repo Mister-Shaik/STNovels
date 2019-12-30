@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
+import {togglesidebar} from '../actions/Index';
 
 class NavBar extends Component {
+
     render() {
         return (
             <div className="pv1 ph3 flex white" style={{Maxheight:"60px", backgroundColor:"#252a34"}}>
                 <div className="flex align-self-center justify-content-start" style={{marginRight:"auto",flex:"1"}}>
-                    <i className="pr4 fa fa-bars fa-2x" onClick={() => this.props.onClick()} />
+                    <i className="pr4 fa fa-bars fa-2x" onClick={() => this.props.togglesidebar()} />
                     <h3 className="ma0">STNovels</h3>
                 </div>
                 <div className="flex align-self-center justify-content-center" style={{flex:"1"}}>
@@ -19,4 +22,8 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar;
+const mapStateToProps = state => ({
+    SideMenuVisible: state.SideMenuVisible
+});
+
+export default connect(mapStateToProps, {togglesidebar })(NavBar);

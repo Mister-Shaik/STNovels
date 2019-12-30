@@ -1,0 +1,35 @@
+.glb-f {
+    font-family: Arial, sans-serif, serif;
+}
+
+.glb-bg-c {
+    background-color: #F4F4F4;
+    color: rgb(49, 49, 49);
+}
+
+.glb-sbg-c{
+    background-color: #000000;
+    color: rgb(167, 167, 167);
+}
+
+.w-spc-nowrap
+{
+    white-space: nowrap
+}
+
+.h-vh-100{
+    height: 100vh;
+}
+
+.visible-hidden{
+    visibility: hidden;
+}
+
+.chap-sidenav-c{
+    background-color:#ff2e63;
+    color:#eaeaea
+}
+.chap-tracker-c{
+    background-color:#414040;
+    color:#eaeaea
+}

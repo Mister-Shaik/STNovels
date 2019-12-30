@@ -25,16 +25,17 @@ const useStyles = makeStyles(theme => ({
     width: 200,
     },
 }));
+
   export default function Preferences() {
 
     const classes = useStyles();
         const [values, setValues] = React.useState({
             mode:"day",
             fontSize:18,
-            curlyQuote:true,
             chapNums:false,
             indent:false,
-            plotToolbar:true,
+            cursewords: false,
+            autofill: true,
             name:"Shaik sha",
             email:"mr.shaiksha@gmail.com"
           });
@@ -96,12 +97,24 @@ const useStyles = makeStyles(theme => ({
                             <Switch
                                 checked={values.plotToolbar}
                                 value={values.plotToolbar}
-                                onChange={handlecheck('plotToolbar')}
-                                name="plotToolbar"
+                                onChange={handlecheck('cursewords')}
+                                name="cursewords"
                                 color="primary"
                             />
                             }
-                            label="Display Plots toolbar on main page?"
+                            label="Filter Curse/Bad words"
+                        /> 
+                        <FormControlLabel
+                            control={
+                            <Switch
+                                checked={values.plotToolbar}
+                                value={values.plotToolbar}
+                                onChange={handlecheck('autofill')}
+                                name="autofill"
+                                color="primary"
+                            />
+                            }
+                            label="Auto Fill tracker content into chapters using @TrackerName%"
                         /> 
                         <FormControlLabel
                             control={
@@ -113,7 +126,7 @@ const useStyles = makeStyles(theme => ({
                                 color="primary"
                             />
                             }
-                            label="Display Chapter numbers for Chapter titles"
+                            label="Display Chapter Numbers for Chapter Titles"
                         />   
                         <FormControlLabel
                             control={
@@ -135,24 +148,21 @@ const useStyles = makeStyles(theme => ({
                     <form className={classes.container} noValidate autoComplete="off">
                         <TextField
                         value={values.name}
-                        name="name"
-                        onChange={handleChange}
                         className={classes.textField}
                         label="Name"
                         margin="normal"
                         variant="outlined"
+                        disabled
                         />
                         <TextField
                         value={values.email}
-                        name="email"
-                        onChange={handleChange}
                         className={classes.textField}
                         label="Email"
                         margin="normal"
                         variant="outlined"
-                        helperText="Please Verify your email"
+                        disabled
                         />
-                        <button className="ml2 mv2 btn btn-primary w-40">Change Password</button>
+                        <a className="ml2 mv2 btn btn-primary w-40" href="/">Change Password</a>
                     </form>
                 </div>
             </div>

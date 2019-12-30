@@ -5,11 +5,11 @@ class Sidenav extends Component {
     render() {
         return (
             <div className="mb2 overflow-y-auto overflow-x-hidden">
-                <h5 className="pa2 shadow-1 white" style={{backgroundColor:"#ff2e63", color:"#eaeaea"}}>
+                <h5 className="pa2 shadow-1 white chap-sidenav-c">
                     {this.props.name}
                 </h5>
                 <Lists name={this.props.name}/>
-                <button type="button"  style={{whiteSpace:"nowrap"}} className="btn hover-bg-light-gray center w-100  pa1 pt2" data-toggle="modal" data-target={"#" + this.props.name}>
+                <button type="button" className="btn hover-bg-light-gray center w-100 pa1 pt2 w-spc-nowrap" data-toggle="modal" data-target={"#" + this.props.name}>
                 <i className="fa fa-plus-circle fa-1x"></i> Add
                 </button>
 

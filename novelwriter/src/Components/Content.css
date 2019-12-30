@@ -30,3 +30,10 @@ th{
 	background-position: right .7em top 50%, 0 0;
 	background-size: .65em auto, 100%;
 }
+
+.novel-list-item:hover .list-del{
+    color: rgb(255, 0, 191);
+}
+.chapter-list-item:hover .chap-del{
+    color: rgb(255, 0, 191);
+}

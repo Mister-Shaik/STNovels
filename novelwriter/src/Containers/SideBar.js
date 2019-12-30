@@ -1,35 +1,28 @@
-import React, { Component } from 'react';
-import Sidenav from '../Components/SubComponents/Sidenav';
-import DashSideNav from '../Components/SubComponents/DashSideNav';
-import Plot from '../Components/SubComponents/Plots'
+import React, { Component } from 'react'
+import DashSideNav from '../Components/Dashboard/DashSideNav'
+import ChapSideNav from '../Components/ChapContent/ChapSideNav'
+//import {Route} from 'react-router-redux'
+import {connect} from 'react-redux'
 
-class SideBar extends Component {
 
-    constructor(){
-        super();
-        this.state = {
-            Aside:true,
-            AsideContent:"Plo"
-        }
-    }
     // If current page is set to Dashboard, show Dasboard side navigation
     // else display Side nav and trackers
     // If sidenav or trackers clicked, Replace the side navigation to the item data
-    render() {
+class SideBar extends Component{
+    render(){
         return (
-            <div className="pr0 db overflow-y-auto overflow-x-hidden bg-white shadow" style={{height:"calc(100vh - 62px)",transition:"0.8s",width:this.props.opens === true ? "35%":"0"}}>
-                {this.props.page === "Dashboard" ? <DashSideNav /> : 
-                (this.state.Aside === false ? <div>
-                    <Sidenav name="Chapters" />
-                    <Sidenav name="Plots" />
-                    <Sidenav name="Trackers" />
-                </div>:
-                <Plot name="Tian Long" Asidetype={this.state.AsideContent} />)
-            }
-
+            <div className="pr0 db overflow-y-auto overflow-x-hidden shadow" style={{height:"calc(100vh - 62px)",transition:"0.8s",width:this.props.SideMenuVisible === true ? "35%":"0"}}>
+                {/* <Route exact path="/" component={ChapSideNav} />    
+                <Route exact path="/Dashboard" component={DashSideNav} />  */}
+                <ChapSideNav />
             </div>
         );
     }
 }
 
-export default SideBar;
+const mapStateToProps = state => ({
+    SideMenuVisible : state.SideMenuVisible
+})
+
+SideBar = connect(mapStateToProps)(SideBar); 
+export default connect(mapStateToProps)(SideBar);

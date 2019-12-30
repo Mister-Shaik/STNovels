@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import data from '../../Files/data.json';
+import data from '../../../Files/data.json';
 import {Collapse} from 'reactstrap';
 
 class Lists extends Component {
@@ -28,10 +28,10 @@ class Lists extends Component {
             let values = Object.keys(x);
             final = values.map(vals => (
                 <div>
-                    <h5 className="mt0 pl3 pa2 shadow-5" style={{backgroundColor:"#08d9d6",color:"#252a34",whiteSpace:"nowrap"}} onClick={() => {let temp = this.state.states; temp[vals] = !temp[vals]; this.setState({states : temp})}}>- {vals} <i className="fa fa-plus-circle fa-1x fr"  data-toggle="modal" data-target={"#" + vals}></i></h5>
+                    <h5 className="mt0 pl3 pa2 shadow-5 w-spc-nowrap chap-tracker-c" onClick={() => {let temp = this.state.states; temp[vals] = !temp[vals]; this.setState({states : temp})}}>- {vals} <i className="fa fa-plus-circle fa-1x fr"  data-toggle="modal" data-target={"#" + vals}></i></h5>
                     
                     <Collapse isOpen={this.state.states[vals]}>
-                        {Object.keys(x[vals]).map(el => (<h5 className="pl3 gray hover-bg-light-gray pl4 overflow-x-hidden" style={{whiteSpace:"nowrap"}}>{x[vals][el]}</h5>))}
+                        {Object.keys(x[vals]).map(el => (<h5 className="pl3 gray hover-bg-light-gray pl4 overflow-x-hidden w-spc-nowrap">{x[vals][el]}</h5>))}
                     </Collapse>
                     
                     <div className="modal fade" id={vals} tabIndex="-1" role="dialog" aria-labelledby="x" aria-hidden="true">
@@ -61,7 +61,7 @@ class Lists extends Component {
         else{
             let x = data[this.props.name];
             let keys = Object.keys(x);
-            final = keys.map(key => (<h5 className="mv0 pl3 gray hover-bg-light-gray pv1"  style={{whiteSpace:"nowrap"}}> {x[key]}</h5>));
+            final = keys.map(key => (<h5 className="mv0 pl3 gray hover-bg-light-gray pv1 w-spc-nowrap" > {x[key]}</h5>));
         }
 
         return (
