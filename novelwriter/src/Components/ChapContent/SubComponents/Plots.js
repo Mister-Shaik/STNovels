@@ -36,7 +36,7 @@ class Plots extends Component {
         let AsideData;
         if(true){
             AsideData = 
-            <div className="bg-white" style={{height:"89vh"}}>
+            <div className="bg-gray light-gray" style={{height:"89vh"}}>
                 <div className="pa2 bg-blue white">
                     <h4 className="ma0">
                     {this.props.name}
@@ -44,7 +44,7 @@ class Plots extends Component {
                     </h4>
                 </div>
                 <div className="overflow-auto">
-                        <p className="pa2" contentEditable="true" placeholder="Write Text Here">simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        <p className="pa2" contentEditable="true" style={{fontSize:"19px"}} placeholder="Write Text Here">simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 </div>
             </div>;
         } 
