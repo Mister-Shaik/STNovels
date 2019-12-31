@@ -1,14 +1,13 @@
-import {ToggleSideBar } from "../actions/Types";
+import {combineReducers} from 'redux'
+import NovelReducer from './NovelReducer'
+import PreferencesReducer from './PreferencesReducer'
+import UserReducer from './UserReducer'
+import NavigationReducer from './NavigationReducer'
 
-const initialState = {
-    SideMenuVisible : true
-    }
 
-const rootReducer = (state = initialState, action) => { 
-    if(action.type === ToggleSideBar){
-        return Object.assign({}, state, {SideMenuVisible : !state.SideMenuVisible})
-    }
-    return state;
-};
-
-export default rootReducer;
+export default combineReducers({
+    Novels: NovelReducer,
+    Preferences: PreferencesReducer,
+    User: UserReducer,
+    Navigation: NavigationReducer
+});

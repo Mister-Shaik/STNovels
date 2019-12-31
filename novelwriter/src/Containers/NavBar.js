@@ -23,7 +23,7 @@ class NavBar extends Component {
 }
 
 const mapStateToProps = state => ({
-    SideMenuVisible: state.SideMenuVisible
+    SideMenuVisible: state.Navigation.SideMenuVisible
 });
 
 export default connect(mapStateToProps, {togglesidebar })(NavBar);

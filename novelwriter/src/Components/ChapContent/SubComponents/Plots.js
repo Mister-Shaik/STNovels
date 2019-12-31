@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import {Table} from 'reactstrap';
+import {connect} from 'react-redux';
+import {opensideelement} from '../../../actions/NavigationActions'
 
 class Plots extends Component {
-
 
     constructor()
     {
@@ -27,9 +27,6 @@ class Plots extends Component {
         this.setState({tmp_name:"",tmp_detail:"",names:temp});
     }
 
-    static propTypes = {
-        prop: PropTypes
-    }
 
     render() {
 
@@ -38,9 +35,9 @@ class Plots extends Component {
             AsideData = 
             <div className="bg-gray light-gray" style={{height:"89vh"}}>
                 <div className="pa2 bg-blue white">
-                    <h4 className="ma0">
-                    {this.props.name}
-                    <i className="fa fa-times fa-1x fr"></i>
+                    <h4 className="ma0 w-spc-nowrap">
+                    <i className="fa fa-chevron-left pr3 fa-1x w-spc-nowrap" onClick={() => {this.props.opensideelement()}}></i>
+                    Tian Long
                     </h4>
                 </div>
                 <div className="overflow-auto">
@@ -67,7 +64,7 @@ class Plots extends Component {
             );
             
             AsideData = 
-            <div className="bg-white" style={{height: "89vh"}}>
+            <div className="bg-white " style={{height: "89vh"}}>
                 <div className="pa2 bg-blue white">
                     <h4 className="ma0">
                     {this.props.name}
@@ -113,4 +110,9 @@ class Plots extends Component {
         )
     }
 }
-export default Plots;
+
+const mapStateToProps = state => ({
+    SideElementVisible: state.Navigation.SideElementVisible
+});
+
+export default connect(mapStateToProps, {opensideelement})(Plots);

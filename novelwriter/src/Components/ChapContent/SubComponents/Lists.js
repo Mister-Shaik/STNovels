@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import data from '../../../Files/data.json';
 import {Collapse} from 'reactstrap';
+import {connect} from 'react-redux';
+import {opensideelement} from '../../../actions/NavigationActions'
 
 class Lists extends Component {
 
@@ -61,7 +63,7 @@ class Lists extends Component {
         else{
             let x = data[this.props.name];
             let keys = Object.keys(x);
-            final = keys.map(key => (<h5 className="mv0 pl3 gray hover-bg-light-gray pv1 w-spc-nowrap" > {x[key]}</h5>));
+            final = keys.map(key => (<h5 className="mv0 pl3 gray hover-bg-light-gray pv1 w-spc-nowrap" onClick={() => {this.props.name == "Plots"?this.props.opensideelement():console.log()}}> {x[key]}</h5>));
         }
 
         return (
@@ -72,4 +74,8 @@ class Lists extends Component {
     }
 }
 
-export default Lists;
+const mapStateToProps = state => ({
+    SideElementVisible: state.Navigation.SideElementVisible
+});
+
+export default connect(mapStateToProps, {opensideelement})(Lists);

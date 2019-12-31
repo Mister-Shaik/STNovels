@@ -21,7 +21,7 @@ class SideBar extends Component{
 }
 
 const mapStateToProps = state => ({
-    SideMenuVisible : state.SideMenuVisible
+    SideMenuVisible : state.Navigation.SideMenuVisible
 })
 
 SideBar = connect(mapStateToProps)(SideBar); 

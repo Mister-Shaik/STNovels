@@ -22,7 +22,7 @@ const initialState = {
             Chapters:[{Id:"001", Name:"Chapter 1"},{Id:"002", Name:"Chapter 2"},{Id:"003", Name:"Chapter 3"},{Id:"004", Name:"Chapter 5"}]
         }
     ],
-    Novel: {
+    ActiveNovel: {
         Name: "Novel Name",
         CreatedOn: "Date",
         Chapters: [

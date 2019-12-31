@@ -11,9 +11,13 @@ const initialState = {
 const Reducer = (state = initialState, action) => { 
     switch(action.type){
         case ToggleSideBar:
-            return Object.assign({}, state, {});
+            return Object.assign({}, state, {
+                SideMenuVisible: !state.SideMenuVisible
+            });
         case OpenSideElement:
-            return Object.assign({}, state, {});
+            return Object.assign({}, state, {
+                SideElementVisible: !state.SideElementVisible
+            });
         case GotoNovel:
             return Object.assign({}, state, {});
         case GotoDashboard:
