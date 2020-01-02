@@ -63,7 +63,7 @@ class Lists extends Component {
         else{
             let x = data[this.props.name];
             let keys = Object.keys(x);
-            final = keys.map(key => (<h5 className="mv0 pl3 gray hover-bg-light-gray pv1 w-spc-nowrap" onClick={() => {this.props.name == "Plots"?this.props.opensideelement():console.log()}}> {x[key]}</h5>));
+            final = keys.map(key => (<h5 className="mv0 pl3 gray hover-bg-light-gray pv1 w-spc-nowrap" onClick={() => {this.props.name === "Plots"?this.props.opensideelement():this.props.getchapter()}}> {x[key]}</h5>));
         }
 
         return (

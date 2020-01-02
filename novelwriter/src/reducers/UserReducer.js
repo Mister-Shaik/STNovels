@@ -14,6 +14,8 @@ const Reducer = (state = initialState, action) => {
             return Object.assign({}, state, {});
         case SignOut:
             return Object.assign({}, state, {});
+        default:
+            break;
     }
     return state;
 };

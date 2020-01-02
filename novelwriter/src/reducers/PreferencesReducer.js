@@ -15,6 +15,8 @@ const Reducer = (state = initialState, action) => {
             return Object.assign({}, state, {});
         case GetPreferences:
             return Object.assign({}, state, {});
+        default:
+            break;
     }
     return state;
 };

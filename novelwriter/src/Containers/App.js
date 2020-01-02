@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import 'tachyons';
-import './App.css';
 import NavBar from './NavBar';
 import SideBar from './SideBar';
 import MainContent from './MainContent';
+import './App.css';
 
 class App extends Component {
   // Show Navbar, which has side bar control and settings button
@@ -13,12 +12,12 @@ class App extends Component {
     return (
         <div className={"glb-f glb-bg-c h-vh-100 "}>
           <NavBar />
-          <div className="flex flex-row justify-center mr0">
-            <SideBar />
-            <MainContent />
-          </div>
+            <div className="flex flex-row justify-center mr0">
+              <SideBar />
+              <MainContent />
+            </div>
         </div>
-    );
+      );
   }
 }
 

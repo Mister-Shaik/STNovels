@@ -19,11 +19,19 @@ const Reducer = (state = initialState, action) => {
                 SideElementVisible: !state.SideElementVisible
             });
         case GotoNovel:
-            return Object.assign({}, state, {});
+            return Object.assign({}, state, {
+                CurrentPage: "Novel"
+            });
         case GotoDashboard:
-            return Object.assign({}, state, {});
+            return Object.assign({}, state, {
+                CurrentPage: "Dashboard"
+            });
         case DashboardNav:
-            return Object.assign({}, state, {});
+            return Object.assign({}, state, {
+                CurrentOption: action.payload
+            });
+        default:
+            break;
     }
     return state;
 };

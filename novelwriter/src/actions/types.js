@@ -6,6 +6,7 @@ export const GetNovel = 'GetNovel';
 export const DeleteNovel = 'DeleteNovel';
 
 export const AddChapter = 'AddChapter';
+export const GetChapter = 'GetChapter';
 export const UpdateChapter = 'UpdateChapter';
 export const DeleteChapter = 'DeleteChapter';
 

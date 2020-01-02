@@ -1,5 +1,5 @@
 import {AddNovel, GetAllNovels, GetNovelNames, GetNovelStats, GetNovel, DeleteNovel,
-        AddChapter, UpdateChapter, DeleteChapter,
+        AddChapter, GetChapter, UpdateChapter, DeleteChapter,
         AddPlot, UpdatePlot, DeletePlot,
         AddTracker, AddTrackerElement, UpdateTrackerElement, DeleteTracker, DeleteTrackerElement} from '../actions/Types';
 
@@ -64,7 +64,8 @@ const initialState = {
                         Content:{}
                     }]
             }]
-    }
+    },
+    ActiveChapter: ""
 };
 
 const Reducer = (state = initialState, action) => { 
@@ -80,6 +81,8 @@ const Reducer = (state = initialState, action) => {
         case GetNovel:
             return Object.assign({}, state, {});
         case DeleteNovel:
+            return Object.assign({}, state, {});
+        case GetChapter:
             return Object.assign({}, state, {});
         case AddChapter:
             return Object.assign({}, state, {});
@@ -103,6 +106,8 @@ const Reducer = (state = initialState, action) => {
             return Object.assign({}, state, {});
         case DeleteTrackerElement:
             return Object.assign({}, state, {});
+        default:
+            break;
     }
     return state;
 };

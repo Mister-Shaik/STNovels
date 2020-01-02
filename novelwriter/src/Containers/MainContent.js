@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
 import ChapterContent from '../Components/ChapContent/ChapterContent'
 import Dashboard from '../Components/Dashboard/Dashboard'
-//import {Route} from 'react-router-redux'
+import {connect} from 'react-redux'
 
 class MainContent extends Component {
     render() {
         return (
             <div className="w-100 glb-bg-c">
-                {/*<Route exact path="/" Component={ChapterContent} />*/}
-                {/*<Route exact path="/dashboard" Component={Dashboard} />*/}
-                {/* this.props.page === "Dashboard" ? <Dashboard /> : <ChapterContent /> */}
-                
-                <ChapterContent />
+                {this.props.CurrentPage === "Novel" ? <ChapterContent /> : <Dashboard />}
             </div>
         );
     }
 }
 
-export default MainContent;
+const mapStateToProps = state => ({
+    CurrentPage: state.Navigation.CurrentPage,
+})
+
+MainContent = connect(mapStateToProps)(MainContent); 
+export default connect(mapStateToProps)(MainContent);

@@ -58,7 +58,6 @@ class ChapterContent extends Component {
     render() {
         let tc = "g-t-c ";
         let fs = "22px";
-        let bgc = "glb-sbg-c ";
         return (
             <div style={{maxHeight:"calc(100vh - 100px)",overflowY:"auto"}}>
                 <div className="br4 w-90 pa4 pt5 center" onClick={() => {if(this.state.Content === ""){this.setState({Content:"Start Typing Here"})}}}>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {togglesidebar} from '../actions/Index';
+import {togglesidebar, gotonovel, gotodashboard} from '../actions/NavigationActions';
 
 class NavBar extends Component {
 
@@ -15,7 +15,7 @@ class NavBar extends Component {
                     <h4 className="pa2">Welcome</h4>
                 </div>
                 <div className="flex align-self-center justify-content-end" style={{marginLeft:"auto",flex:"1"}}>
-                    <i className="fa fa-gear fa-2x" />
+                <i className="fa fa-gear fa-2x" onClick={() => {this.props.CurrentPage === "Novel"?this.props.gotodashboard():this.props.gotonovel()}}/>
                 </div>
             </div>
         );
@@ -23,7 +23,8 @@ class NavBar extends Component {
 }
 
 const mapStateToProps = state => ({
-    SideMenuVisible: state.Navigation.SideMenuVisible
+    SideMenuVisible: state.Navigation.SideMenuVisible,
+    CurrentPage: state.Navigation.CurrentPage,
 });
 
-export default connect(mapStateToProps, {togglesidebar })(NavBar);
+export default connect(mapStateToProps, {togglesidebar, gotodashboard, gotonovel })(NavBar);

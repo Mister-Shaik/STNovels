@@ -10,12 +10,12 @@ class DashSideNav extends Component {
       // initially all of them will have visibility hidden 
     render() {
         return (
-            <div className="pv3 w-100" style={{height:"20px"}}>
+            <div className="pv3 w-100 bg-white" style={{height:"20px"}}>
                   <div className="flex hover-bg-light-gray w-spc-nowrap">
                         <div className="bg-blue mr3 visible-hidden" style={{minWidth:"5px"}}/>    
                         <h4 className="pl4 pv3"><i className="fa fa-desktop pr2"/> Dashboard</h4>
                   </div>
-                  <div className="flex bg-light-gray w-spc-nowrap">
+                  <div className="flex hover-bg-light-gray w-spc-nowrap">
                         <div className="bg-blue mr3 visible-hidden" style={{minWidth:"5px"}}/>                        
                         <h4 className="pl4 pv3"><i className="fa fa-book pr2"/> Workspace</h4>
                   </div>

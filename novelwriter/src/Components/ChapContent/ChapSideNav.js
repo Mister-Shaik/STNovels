@@ -10,10 +10,10 @@ class ChapSideNav extends Component {
                 {this.props.SideElementVisible ? 
                 <div>
                 <Sidenav name="Chapters" />
-                <Sidenav name="Plots" />
+                <Sidenav name="Plots" /> 
                 <Sidenav name="Trackers" />
                 </div>
-                :<Plot name="Tian Long" Asidetype="Hero of Lord" /> 
+                :<Plot name="Tian Long" /> 
             }
             </div>
         )
