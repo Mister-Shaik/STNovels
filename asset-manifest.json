@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/novelwriter/static/css/main.67114a9d.chunk.css",
+    "main.js": "/novelwriter/static/js/main.4be6fa91.chunk.js",
+    "main.js.map": "/novelwriter/static/js/main.4be6fa91.chunk.js.map",
+    "runtime-main.js": "/novelwriter/static/js/runtime-main.1b176558.js",
+    "runtime-main.js.map": "/novelwriter/static/js/runtime-main.1b176558.js.map",
+    "static/css/2.eb45ad44.chunk.css": "/novelwriter/static/css/2.eb45ad44.chunk.css",
+    "static/js/2.6db17143.chunk.js": "/novelwriter/static/js/2.6db17143.chunk.js",
+    "static/js/2.6db17143.chunk.js.map": "/novelwriter/static/js/2.6db17143.chunk.js.map",
+    "index.html": "/novelwriter/index.html",
+    "precache-manifest.308bf36dbfdd740592eef5be9b072b07.js": "/novelwriter/precache-manifest.308bf36dbfdd740592eef5be9b072b07.js",
+    "service-worker.js": "/novelwriter/service-worker.js",
+    "static/css/2.eb45ad44.chunk.css.map": "/novelwriter/static/css/2.eb45ad44.chunk.css.map",
+    "static/css/main.67114a9d.chunk.css.map": "/novelwriter/static/css/main.67114a9d.chunk.css.map",
+    "static/js/2.6db17143.chunk.js.LICENSE": "/novelwriter/static/js/2.6db17143.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1b176558.js",
+    "static/css/2.eb45ad44.chunk.css",
+    "static/js/2.6db17143.chunk.js",
+    "static/css/main.67114a9d.chunk.css",
+    "static/js/main.4be6fa91.chunk.js"
+  ]
+}
